@@ -1,0 +1,9 @@
+/* 切换主题动画相关 */
+::view-transition-new(root),
+::view-transition-old(root) {
+    animation: none;
+}
+
+.dark::view-transition-old(root) {
+    z-index: 100;
+}
