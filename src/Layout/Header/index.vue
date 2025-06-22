@@ -2,18 +2,19 @@
 	<el-header>
 		<div class="header-container">
 			<div class="header-container-left">
-				<div>
-					<Icon name="icon-toggle-left"></Icon>
+				<div @click="toggleSideCollapse">
+					<Icon v-if="!settingStore.sideIsCollapse" name="icon-toggle-left"></Icon>
+					<Icon v-else name="icon-toggle-right"></Icon>
 				</div>
-				<div>首页</div>
+				<div class="header-title">首页</div>
 			</div>
 			<div class="header-container-right">
 				<div class="header-container-right-option" @click="toggleTheme">
-					<Icon name="icon-camera"></Icon>
+					<Icon name="icon-heibai"></Icon>
 				</div>
 				<div class="header-container-right-option" @click="openLanguage">
 					<el-dropdown @command="handleCommand" trigger="contextmenu" ref="languageDropdown">
-						<Icon name="icon-Chinese"></Icon>
+						<Icon name="icon-fanyi"></Icon>
 						<template #dropdown>
 							<el-dropdown-menu>
 								<el-dropdown-item command="chinese">中文</el-dropdown-item>
@@ -27,13 +28,15 @@
 					<Icon name="icon-fullscreen-shrink" v-else></Icon>
 				</div>
 				<div class="header-container-right-option" @click="openBell">
-					<el-badge :value="1" class="item" type="primary" :style="{ display: 'flex' }">
+					<el-badge :value="7" class="item" type="primary" :style="{ display: 'flex' }" color="red">
 						<el-dropdown popper-class="header-bell" trigger="contextmenu" ref="bellRef">
 							<Icon name="icon-notification"></Icon>
 							<template #dropdown>
 								<el-tabs :stretch="true" :style="{ width: '330px' }" v-model="activeName"
 									@tab-click="handleTabClick">
-									<el-tab-pane label="通知" name="notify">通知</el-tab-pane>
+									<el-tab-pane label="通知" name="notify">
+										<el-empty description="暂无通知" />
+									</el-tab-pane>
 									<el-tab-pane label="消息(5)" name="message">
 										<el-scrollbar max-height="330px">
 											<template v-for="item in mockNotifyData.message" :key="item._id">
@@ -58,18 +61,18 @@
 					</el-badge>
 				</div>
 				<div class="header-container-right-option option-avatar">
-					<el-dropdown>
+					<el-dropdown @command="handleAvatarOption">
 						<div>
 							<el-avatar>user</el-avatar>
 							<span>&nbsp;&nbsp; 昊轩</span>
 						</div>
 						<template #dropdown>
 							<el-dropdown-menu>
-								<el-dropdown-item>
+								<el-dropdown-item command="account-setting">
 									<Icon name="icon-user"></Icon>
 									<span>&nbsp;账户设置</span>
 								</el-dropdown-item>
-								<el-dropdown-item>
+								<el-dropdown-item command="exit">
 									<Icon name="icon-sign-out"></Icon>
 									<span>&nbsp;退出系统</span>
 								</el-dropdown-item>
@@ -95,6 +98,16 @@ import notifyData from '@/Mock/header-notify'
 import MessageList from './src/MessageList.vue'
 import TodoList from './src/TodoList.vue'
 import Setting from './src/Setting.vue'
+import useSettingStore from '@/store/setting'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+const settingStore = useSettingStore()
+
+const toggleSideCollapse = () => {
+	settingStore.changeSideCollapse()
+}
 
 const toggleTheme = (e: MouseEvent) => {
 	const { clientX, clientY } = e
@@ -161,6 +174,15 @@ const openSetting = () => {
 	settingState.value = true
 }
 
+const handleAvatarOption = (command: string | number | object) => {
+	if (command === 'account-setting') {
+		router.push('/account-setting')
+	} else {
+
+	}
+
+}
+
 </script>
 
 <style scoped lang="scss">
@@ -169,6 +191,10 @@ const openSetting = () => {
 	justify-content: space-between;
 	align-items: center;
 	height: 100%;
+
+	.header-title {
+		margin-left: 30px;
+	}
 
 	.header-container-left {
 		display: flex;
@@ -181,7 +207,6 @@ const openSetting = () => {
 		height: 100%;
 
 		.header-container-right-option {
-			border: 1px solid red;
 			display: flex;
 			align-items: center;
 			justify-content: center;

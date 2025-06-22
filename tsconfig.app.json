@@ -9,6 +9,8 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "jsx": "preserve",
+    "jsxImportSource": "vue",
     // 解析路径
     "baseUrl": "./",
     "paths": {

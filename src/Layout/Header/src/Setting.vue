@@ -1,11 +1,10 @@
 <template>
-    <el-drawer v-model="model" title="I am the title" :with-header="false">
+    <el-drawer v-model="model" title="系统配置">
         <span>Hi there!</span>
     </el-drawer>
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
 
 const model = defineModel()
 //todo：

@@ -16,6 +16,26 @@ export const staticRoutes: RouteRecordRaw[] = [
 			{
 				path: 'dashboard',
 				component: () => import('@/page/dashboard/index.vue')
+			},
+			{
+				path: 'account-setting',
+				component: () => import('@/page/account-setting/index.vue')
+			},
+			{
+				path: 'user',
+				component: () => import('@/page/user/index.vue')
+			},
+			{
+				path: 'role',
+				component: () => import('@/page/role/index.vue')
+			},
+			{
+				path: 'department',
+				component: () => import('@/page/department/index.vue')
+			},
+			{
+				path: 'wavesurfer',
+				component: () => import('@/page/able/wavesurfer/index.vue')
 			}
 		]
 	}

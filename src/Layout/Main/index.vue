@@ -1,9 +1,22 @@
 <template>
-	<el-main>
-		<router-view />
-	</el-main>
+	<div class="main-container">
+		<el-main>
+			<router-view />
+		</el-main>
+	</div>
+
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import useSettingStore from '@/store/setting';
+const settingStore = useSettingStore()
 
-<style scoped></style>
+
+</script>
+
+<style scoped>
+.main-container {
+	width: 100%;
+	background-color: #f6f6f6;
+}
+</style>

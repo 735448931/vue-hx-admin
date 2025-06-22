@@ -1,7 +1,7 @@
 <template>
-	<div>
-		dashboard
-	</div>
+    <div>
+        user
+    </div>
 </template>
 
 <script setup lang="ts">

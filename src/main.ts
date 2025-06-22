@@ -15,6 +15,11 @@ import '@/style/index.css'
 import Icon from '@/components/Icon.vue'
 import '@/assets/icon.js'
 
+import VxeUIAll from 'vxe-pc-ui'
+import 'vxe-pc-ui/lib/style.css'
+import VxeUITable from 'vxe-table'
+import 'vxe-table/lib/style.css'
+
 import { router } from './router'
 
 const app = createApp(App)
@@ -25,4 +30,6 @@ app.use(ElementPlus, {
 })
 app.use(router)
 app.use(pinia)
+app.use(VxeUIAll)
+app.use(VxeUITable)
 app.mount('#app')

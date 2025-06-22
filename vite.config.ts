@@ -4,6 +4,7 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 import path from 'path'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig({
 	resolve: {
@@ -19,6 +20,7 @@ export default defineConfig({
 		}),
 		Components({
 			resolvers: [ElementPlusResolver()]
-		})
+		}),
+		vueJsx({})
 	]
 })

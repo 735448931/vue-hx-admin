@@ -1,12 +1,8 @@
 <template>
-	<svg
-		class="icon"
-		aria-hidden="true"
-		:style="{
-			width: iconSize,
-			height: iconSize
-		}"
-	>
+	<svg class="icon" aria-hidden="true" :style="{
+		width: iconSize,
+		height: iconSize
+	}">
 		<use :xlink:href="iconName" :fill="color" />
 	</svg>
 </template>
@@ -39,5 +35,6 @@ const iconSize = computed(() => {
 	vertical-align: -0.15em;
 	fill: currentColor;
 	overflow: hidden;
+	display: inline-flex;
 }
 </style>
