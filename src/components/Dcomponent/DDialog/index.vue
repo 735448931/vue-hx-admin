@@ -44,10 +44,8 @@ import { type ButtonOptions } from './types'
 
 const { closeDialog } = useDialog()
 import type { DialogOptions, EventType } from './types'
+import { isFunction } from '@/utils'
 
-function isFunction(value: unknown): value is Function {
-	return typeof value === 'function'
-}
 
 const eventsCallBack = (event: EventType, options: DialogOptions) => {
 	if (options?.[event] && isFunction(options?.[event])) {

@@ -14,7 +14,7 @@
         <!--  todo: width最小只能150px -->
         <el-popover content="后退(可长按)">
             <template #reference>
-                <el-button circle ref="pressBackward">
+                <el-button circle v-longpress:200:100="() => wavesurfer.skip(-1)">
                     <Icon name="icon-houtui"></Icon>
                 </el-button>
             </template>
@@ -32,7 +32,7 @@
 
         <el-popover content="快进(可长按)">
             <template #reference>
-                <el-button circle ref="pressForward">
+                <el-button circle v-longpress:200:100="() => wavesurfer.skip(1)">
                     <Icon name="icon-kuaijin"></Icon>
                 </el-button>
             </template>
@@ -51,28 +51,13 @@
 <script setup lang="ts">
 import { onBeforeUnmount, onMounted, ref } from 'vue';
 import WaveSurfer from 'wavesurfer.js'
-import { onLongPress } from '@vueuse/core'
 const wavesurfer = ref()
 const wavesurferRef = ref();
 const loading = ref(true);
 
-const pressBackward = ref(null)
-const pressForward = ref(null)
-
-
-// todo:按住快进一直快进 后退 目前仅支持长按跳过10s
-onLongPress(pressBackward, () => {
-    wavesurfer.value.skip(10)
-})
-onLongPress(pressForward, () => {
-    wavesurfer.value.skip(10)
-})
-
 
 // 音频播放速率
 const playRate = ref(1)
-
-
 // 音频总时长（格式化后 mm:ss）
 const totalTime = ref();
 // 音频总时长（单位秒）
@@ -139,8 +124,6 @@ function init() {
     });
 
 }
-
-
 
 
 onMounted(() => {

@@ -44,7 +44,7 @@
 	<button @click="onShow">开始验证</button>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { reactive } from 'vue'
 
 

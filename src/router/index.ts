@@ -36,6 +36,18 @@ export const staticRoutes: RouteRecordRaw[] = [
 			{
 				path: 'wavesurfer',
 				component: () => import('@/page/able/wavesurfer/index.vue')
+			},
+			{
+				path: 'survey_list',
+				component: () => import('@/page/survey/surveyList.vue')
+			},
+			{
+				path: 'survey_trash',
+				component: () => import('@/page/survey/surveyTrash.vue')
+			},
+			{
+				path: '/survey/:id',
+				component: () => import('@/page/survey/Edit/index.vue')
 			}
 		]
 	}

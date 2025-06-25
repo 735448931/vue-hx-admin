@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    Component: typeof import('./src/components/Survey/SuerveyInfo/component.vue')['default']
     DDialog: typeof import('./src/components/Dcomponent/DDialog/index.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
@@ -39,8 +40,10 @@ declare module 'vue' {
     ElRadioButton: typeof import('element-plus/es')['ElRadioButton']
     ElRadioGroup: typeof import('element-plus/es')['ElRadioGroup']
     ElRow: typeof import('element-plus/es')['ElRow']
+    ElScrollbar: typeof import('element-plus/es')['ElScrollbar']
     ElSelect: typeof import('element-plus/es')['ElSelect']
     ElSlider: typeof import('element-plus/es')['ElSlider']
+    ElSpace: typeof import('element-plus/es')['ElSpace']
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElSwitch: typeof import('element-plus/es')['ElSwitch']
     ElTable: typeof import('element-plus/es')['ElTable']
@@ -52,8 +55,18 @@ declare module 'vue' {
     ElTimePicker: typeof import('element-plus/es')['ElTimePicker']
     ElUpload: typeof import('element-plus/es')['ElUpload']
     Icon: typeof import('./src/components/Icon.vue')['default']
+    Info: typeof import('./src/components/Survey/SuerveyInfo/Info.vue')['default']
+    Interface: typeof import('./src/components/Survey/SurveyParagraph/interface.vue')['default']
+    PropComponent: typeof import('./src/components/Survey/SurveyCheckbox/PropComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SurveyCheckbox: typeof import('./src/components/Survey/SurveyCheckbox/SurveyCheckbox.vue')['default']
+    SurveyInfo: typeof import('./src/components/Survey/SurveyInfo/SurveyInfo.vue')['default']
+    SurveyInput: typeof import('./src/components/Survey/SurveyInput/SurveyInput.vue')['default']
+    SurveyParagraph: typeof import('./src/components/Survey/SurveyParagraph/SurveyParagraph.vue')['default']
+    SurveyRadio: typeof import('./src/components/Survey/SurveyRadio/SurveyRadio.vue')['default']
+    SurveyTextarea: typeof import('./src/components/Survey/SurveyTextarea/SurveyTextarea.vue')['default']
+    SurveyTitle: typeof import('./src/components/Survey/SurveyTitle/SurveyTitle.vue')['default']
     VxeSearch: typeof import('./src/components/Dvxe-table/vxeSearch.vue')['default']
   }
   export interface GlobalDirectives {

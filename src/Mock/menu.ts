@@ -46,16 +46,16 @@ let menu: MenuItem[] = [
 		index: '/survey',
 		children: [
 			{
-				name: 'survey',
+				name: 'surveylist',
 				comment: '问卷',
 				icon: 'survey',
-				index: '/survey'
+				index: '/survey_list'
 			},
 			{
-				name: 'trash',
+				name: 'surveytrash',
 				comment: '回收站',
 				icon: 'trash',
-				index: '/trash'
+				index: '/survey_trash'
 			}
 		]
 	},

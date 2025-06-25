@@ -1,4 +1,4 @@
-import { createApp } from 'vue'
+import { createApp, type Directive } from 'vue'
 import App from './App.vue'
 
 import ElementPlus from 'element-plus'
@@ -23,6 +23,11 @@ import 'vxe-table/lib/style.css'
 import { router } from './router'
 
 const app = createApp(App)
+
+import * as directives from '@/directives'
+Object.keys(directives).forEach((key) => {
+	app.directive(key, (directives as { [key: string]: Directive })[key])
+})
 
 app.component('Icon', Icon)
 app.use(ElementPlus, {
