@@ -49,6 +49,6 @@ const handleClose = (key: string, keyPath: string[]) => {
 
 <style scoped>
 .el-menu {
-	height: calc(100vh);
+	height: calc(100vh - 60px);
 }
 </style>

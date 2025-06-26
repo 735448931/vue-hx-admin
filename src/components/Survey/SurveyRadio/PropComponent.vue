@@ -1,5 +1,5 @@
 <template>
-    <el-form label-width="auto" :model="form" label-position="top">
+    <el-form :disabled="props.isLocked" label-width="auto" :model="form" label-position="top">
 
         <el-form-item label="单选标题">
             <el-input v-model="form.title" />

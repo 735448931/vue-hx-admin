@@ -1,8 +1,7 @@
 <template>
     <div class="survey-edit-header">
         <div class="header-left">
-            <el-button type="primary">返回</el-button>
-
+            <el-button type="primary" @click="router.back()">返回</el-button>
             <div class="header-title">问卷标题</div>
         </div>
 
@@ -11,7 +10,7 @@
                 <Icon name="icon-shanchu"></Icon>
             </el-button>
 
-            <el-button circle>
+            <el-button circle @click="handleLock">
                 <Icon name="icon-lock"></Icon>
             </el-button>
 
@@ -47,11 +46,18 @@
 
 <script setup lang="ts">
 import useSurveyStore from '@/store/survey';
+import { useRouter } from 'vue-router';
+
+const router = useRouter()
 
 const surveyStore = useSurveyStore()
 
 const handleDelect = () => {
     surveyStore.removeSelectedComponent()
+}
+
+const handleLock = () => {
+    surveyStore.toggleComponentLocked()
 }
 
 const handleCopy = () => {

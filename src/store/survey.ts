@@ -140,6 +140,7 @@ const useSurveyStore = defineStore('survey', {
 
 			this.selectedId = this.componentList[selectedIndex + 1].fe_id
 		},
+		// 右侧属性组件修改
 		changeComponentProps(data: {
 			fe_id: string
 			newProps: ComponentProps
@@ -149,6 +150,14 @@ const useSurveyStore = defineStore('survey', {
 			this.componentList.forEach((component) => {
 				if (component.fe_id === fe_id) {
 					component.props = newProps
+				}
+			})
+		},
+		// 顶部锁定选定的组件
+		toggleComponentLocked() {
+			this.componentList.forEach((component) => {
+				if (component.fe_id === this.selectedId) {
+					component.isLocked = !component.isLocked
 				}
 			})
 		}

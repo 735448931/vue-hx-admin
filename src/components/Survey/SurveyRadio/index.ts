@@ -13,7 +13,7 @@ export interface SurveyRadioProps {
 	value?: string
 	// 用于 PropComponent
 	onChange?: (newProps: SurveyRadioProps) => void
-	disabled?: boolean
+	isLocked?: boolean
 }
 
 export const SurveyRadioDefaultProps: SurveyRadioProps = {
