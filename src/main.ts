@@ -33,6 +33,7 @@ app.component('Icon', Icon)
 app.use(ElementPlus, {
 	locale: zhCn
 })
+
 app.use(router)
 app.use(pinia)
 app.use(VxeUIAll)

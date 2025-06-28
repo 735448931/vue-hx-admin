@@ -10,6 +10,7 @@ declare module 'vue' {
   export interface GlobalComponents {
     Component: typeof import('./src/components/Survey/SuerveyInfo/component.vue')['default']
     DDialog: typeof import('./src/components/Dcomponent/DDialog/index.vue')['default']
+    DTable: typeof import('./src/components/Dcomponent/DTable/index.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
     ElAvatar: typeof import('element-plus/es')['ElAvatar']
     ElBadge: typeof import('element-plus/es')['ElBadge']
@@ -61,6 +62,7 @@ declare module 'vue' {
     PropComponent: typeof import('./src/components/Survey/SurveyCheckbox/PropComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Src: typeof import('./src/components/Dcomponent/DTable/src/index.vue')['default']
     SurveyCheckbox: typeof import('./src/components/Survey/SurveyCheckbox/SurveyCheckbox.vue')['default']
     SurveyInfo: typeof import('./src/components/Survey/SurveyInfo/SurveyInfo.vue')['default']
     SurveyInput: typeof import('./src/components/Survey/SurveyInput/SurveyInput.vue')['default']
