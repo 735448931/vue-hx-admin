@@ -11,6 +11,7 @@
     "noUncheckedSideEffectImports": true,
     "jsx": "preserve",
     "jsxImportSource": "vue",
+    "types": ["element-plus/global"],
     // 解析路径
     "baseUrl": "./",
     "paths": {

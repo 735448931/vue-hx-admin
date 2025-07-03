@@ -9,6 +9,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Component: typeof import('./src/components/Survey/SuerveyInfo/component.vue')['default']
+    DAvatar: typeof import('./src/components/Dcomponent/DAvatar/index.vue')['default']
     DDialog: typeof import('./src/components/Dcomponent/DDialog/index.vue')['default']
     DTable: typeof import('./src/components/Dcomponent/DTable/index.vue')['default']
     ElAside: typeof import('element-plus/es')['ElAside']
@@ -29,6 +30,7 @@ declare module 'vue' {
     ElForm: typeof import('element-plus/es')['ElForm']
     ElFormItem: typeof import('element-plus/es')['ElFormItem']
     ElIcon: typeof import('element-plus/es')['ElIcon']
+    ElImage: typeof import('element-plus/es')['ElImage']
     ElInput: typeof import('element-plus/es')['ElInput']
     ElMain: typeof import('element-plus/es')['ElMain']
     ElMenu: typeof import('element-plus/es')['ElMenu']
@@ -36,6 +38,7 @@ declare module 'vue' {
     ElMenuItemGroup: typeof import('element-plus/es')['ElMenuItemGroup']
     ElOption: typeof import('element-plus/es')['ElOption']
     ElPagination: typeof import('element-plus/es')['ElPagination']
+    ElPopconfirm: typeof import('element-plus/es')['ElPopconfirm']
     ElPopover: typeof import('element-plus/es')['ElPopover']
     ElRadio: typeof import('element-plus/es')['ElRadio']
     ElRadioButton: typeof import('element-plus/es')['ElRadioButton']
@@ -54,6 +57,7 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElTextarea: typeof import('element-plus/es')['ElTextarea']
     ElTimePicker: typeof import('element-plus/es')['ElTimePicker']
+    ElTooltip: typeof import('element-plus/es')['ElTooltip']
     ElTree: typeof import('element-plus/es')['ElTree']
     ElUpload: typeof import('element-plus/es')['ElUpload']
     Icon: typeof import('./src/components/Icon.vue')['default']
@@ -70,6 +74,7 @@ declare module 'vue' {
     SurveyRadio: typeof import('./src/components/Survey/SurveyRadio/SurveyRadio.vue')['default']
     SurveyTextarea: typeof import('./src/components/Survey/SurveyTextarea/SurveyTextarea.vue')['default']
     SurveyTitle: typeof import('./src/components/Survey/SurveyTitle/SurveyTitle.vue')['default']
+    UploadAvatar: typeof import('./src/components/Dcomponent/DAvatar/uploadAvatar.vue')['default']
     VxeSearch: typeof import('./src/components/Dvxe-table/vxeSearch.vue')['default']
   }
   export interface GlobalDirectives {

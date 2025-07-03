@@ -2,7 +2,7 @@ import { createApp, type Directive } from 'vue'
 import App from './App.vue'
 
 import ElementPlus from 'element-plus'
-
+import 'element-plus/dist/index.css'
 import zhCn from 'element-plus/es/locale/lang/zh-cn'
 
 import pinia from './store/index.ts'
@@ -19,6 +19,8 @@ import VxeUIAll from 'vxe-pc-ui'
 import 'vxe-pc-ui/lib/style.css'
 import VxeUITable from 'vxe-table'
 import 'vxe-table/lib/style.css'
+
+import 'animate.css'
 
 import { router } from './router'
 

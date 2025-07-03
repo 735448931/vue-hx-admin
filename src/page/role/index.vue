@@ -21,7 +21,6 @@
           </el-dropdown-menu>
         </template>
       </el-dropdown>
-
     </div>
     <vxe-table border show-overflow height="500" :data="tableData">
       <vxe-column type="seq" width="70"></vxe-column>

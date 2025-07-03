@@ -22,5 +22,14 @@ export default defineConfig({
 			resolvers: [ElementPlusResolver()]
 		}),
 		vueJsx({})
-	]
+	],
+	server: {
+		port: 5173,
+		proxy: {
+			'/api': {
+				target: 'http://localhost:3001',
+				changeOrigin: true
+			}
+		}
+	}
 })
