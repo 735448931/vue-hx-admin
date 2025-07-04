@@ -10,3 +10,7 @@ export const myInjectionKey = Symbol()
 // const foo = inject(key) // foo 的类型：string | undefined
 
 // https://cn.vuejs.org/guide/typescript/composition-api#typing-provide-inject
+
+// <template v-for="(_,slot) in $slots" :key="slot" #[slot]="slotProps">
+//  <slot :name="slot" v-bind="slotProps"> </slot>
+// </template>

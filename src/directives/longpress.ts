@@ -13,8 +13,8 @@ export const longpress: Directive = {
 		let num = 500
 		// 持续时间
 		let interNum = null
-		let timer: number | null = null
-		let interTimer: number | null = null
+		let timer: any = null
+		let interTimer: any = null
 
 		let cb = binding.value
 

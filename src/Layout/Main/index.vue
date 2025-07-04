@@ -15,8 +15,7 @@ const settingStore = useSettingStore()
 .main-container {
 	width: 100%;
 	background-color: #f6f6f6;
-	height: calc(100vh - 100px);
 	padding: 20px;
-	border: 1px solid red;
+	border: 1px solid greenyellow;
 }
 </style>

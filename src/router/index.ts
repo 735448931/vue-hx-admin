@@ -34,6 +34,10 @@ export const staticRoutes: RouteRecordRaw[] = [
 				component: () => import('@/page/department/index.vue')
 			},
 			{
+				path: 'department/:id',
+				component: () => import('@/page/department/detail.vue')
+			},
+			{
 				path: 'wavesurfer',
 				component: () => import('@/page/able/wavesurfer/index.vue')
 			},
